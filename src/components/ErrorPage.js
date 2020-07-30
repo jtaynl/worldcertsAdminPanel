@@ -24,13 +24,13 @@ class ErrorPage extends Component {
     );
 
     this.state = {
-      showWalletProviderSelector: false
+      showWalletProviderSelector: false,
     };
   }
 
   toggleWalletProviderSelector() {
     this.setState({
-      showWalletProviderSelector: !this.state.showWalletProviderSelector
+      showWalletProviderSelector: !this.state.showWalletProviderSelector,
     });
   }
 
@@ -40,19 +40,13 @@ class ErrorPage extends Component {
       <Panel style={{ textAlign: "center" }}>
         <div css={css(walletError)}>
           <img
-            src={"../../static/images/wallet-error.svg"}
+            src={"../../static/images/wallet-error.png"}
             style={{ width: "165px" }}
           />
           <h1>Admin wallet address not found.</h1>
           {!showWalletProviderSelector ? (
             <div>
-              <p>
-                Please click{" "}
-                <a href="https://docs.opencerts.io/appendix_test_accounts.html">
-                  here
-                </a>{" "}
-                and follow the instructions to install a test wallet.
-              </p>
+              <p></p>
               <OrangeButton
                 variant="pill"
                 onClick={this.toggleWalletProviderSelector}
@@ -79,20 +73,17 @@ class ErrorPage extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  loadAdminAddress: payload => dispatch(loadAdminAddress(payload))
+const mapDispatchToProps = (dispatch) => ({
+  loadAdminAddress: (payload) => dispatch(loadAdminAddress(payload)),
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(ErrorPage);
+export default connect(null, mapDispatchToProps)(ErrorPage);
 
 ErrorPage.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node
+    PropTypes.node,
   ]),
   rest: PropTypes.object,
-  loadAdminAddress: PropTypes.func
+  loadAdminAddress: PropTypes.func,
 };
