@@ -3,14 +3,14 @@ export const white = "#ffffff";
 export const brandBlue = "#0099cc";
 
 export const brandDarkBlue = "#005f7f";
-export const brandOrange = "#ff9933";
-export const brandDarkOrange = "#ff6a33";
+export const brandOrange = "#0095FA";
+export const brandDarkOrange = "#1a8cff";
 export const lightGrey = "#e5e5e5";
 export const greyBlue = "#c1c9d1";
 export const brandDark = "#324353";
 export const faintBlue = "#f5f8fb";
 export const faintGreen = "#f5fbf7";
-export const faintOrange = "#fcf3e5";
+export const faintOrange = "#f5fbf7";
 
 export const headerUiBg = "#f3f8fc";
 export const lowTranslucencyWhite = "rgba(255, 255, 255, 0.7)";
