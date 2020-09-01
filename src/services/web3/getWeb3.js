@@ -43,12 +43,12 @@ async function loadWeb3Injected() {
   trace(`Loading injected web3`);
   let { web3 } = window;
 
+  const name = typeof key === "string" ? key : `typeof ${typeof key}`;
+
   if (
     typeof window.ethereum !== "undefined" || // new metamask api EIP-1102
     typeof window.web3 !== "undefined" // old metamask api
   ) {
-    trace(`Metamask provider found: ${window.web3}`);
-
     const provider = window.ethereum || window.web3.currentProvider;
     web3 = new Web3(provider);
     // Request for account access if required
